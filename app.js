@@ -7,7 +7,7 @@ const _ = require("lodash")
 
 const app = express();
 
-mongoose.connect('mongodb+srv://Admin:admin-123@cluster0.tlr2qhb.mongodb.net/TodoListDB')
+mongoose.connect(process.env.DATABASE)
   .then()
 {
   console.log("connected to DB")
