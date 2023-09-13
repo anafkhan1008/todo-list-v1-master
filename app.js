@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+require('dotenv').config()
 const _ = require("lodash")
 
 const app = express();
@@ -127,7 +128,7 @@ app.post("/delete", async (req, res) => {
   }
 
 })
-
-app.listen(3000, function () {
+const port = process.env.PORT || 3000
+app.listen(port, function () {
   console.log("Server running on port 3000.");
 });
